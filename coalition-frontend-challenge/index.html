@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CT_SkillTest - Los Angeles</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <style>
+    .swiper {
+      width: 85%;
+      height: 85%;
+      padding: 10px 0 !important;
+    }
+
+    .swiper-slide {
+      width: 235px !important;
+      margin-right: 15px !important;
+      background: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 85%;
+      height: 85%;
+      object-fit: cover;
+    }
+
+
+    .swiper-horizontal>.swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+      bottom: -4px;
+      top: var(--swiper-pagination-top, auto);
+      left: 0;
+      width: 100%;
+    }
+
+
+
+    /*  Accordion*/
+    .accordion {
+      border: none;
+      outline: none;
+      transition: 0.4s;
+    }
+
+    .active,
+    .accordion:hover {
+      background-color: #ccc;
+    }
+
+    .accordion-sub {
+      /* padding: 0 18px; */
+      background-color: #e7e7e7;
+      color: #404f6c;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+    }
+
+
+    .schedule {
+      display: none;
+      animation: fadeEffect 1s;
+      ;
+    }
+
+    .sch {
+      background: #ffffff6e;
+      color: #404f6c;
+      width: 300px;
+    }
+
+    @keyframes fadeEffect {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body class="font-sans bg-gray-900">
+
+  <section class="h-screen overflow-y-auto overflow-x-hidden">
+    <nav class="w-full md:w-3/5 mx-auto px-10 py-10 md:px-0 md:py-2  bg-transparent relative z-20">
+      <div class="flex items-center justify-between">
+        <a href="#" class="block">
+          <img src="images/lam-logo.png" alt="logo" class="w-8 h-8" />
+        </a>
+        <div class="flex space-x-6">
+          <a href="#history" class="text-white hover:text-blue-500">01. HISTORY</a>
+          <a href="#climb" class="text-white hover:text-blue-500">02. TEAM</a>
+        </div>
+      </div>
+    </nav>
+    <header class="absolute inset-0 flex justify-center items-center z-10">
+      <img src="images/lam-hero-image.png" alt="background" class="w-full h-full object-cover" />
+    </header>
+  </section>
+
+  <section class="h-full md:hidden overflow-y-auto overflow-x-hidden">
+    <header class="absolute inset-0 flex justify-center items-center z-10">
+      <img src="images/lam-hero-image.png" alt="background" class="w-full h-full object-cover" />
+    </header>
+  </section>
+
+  <nav class="w-full h-20 mx-auto px-6 md:px-32 lg:px-56 py-6 bg-white shadow-md relative top-0 z-20">
+    <div class="flex items-center justify-between">
+      <a href="#" class="flex">
+        <img src="images/lam-logo.png" alt="logo" class="w-8 h-8 mr-4" />
+        <img src="images/lam-logo-text.png" alt="logo" class="w-16 h-8" />
+      </a>
+      <div class="flex space-x-4">
+        <a href="#history" class="text-gray-700 underline hover:text-blue-500">01. HISTORY</a>
+        <a href="#climb" class="text-gray-700 underline hover:text-blue-500">02. TEAM</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="h-screen bg-cover bg-no-repeat bg-center justify-items-center content-between"
+    style="background-image: url('images/lam-middle-image.png')">
+    <div class="px-4 md:px-32 lg:px-56 py-4 md:py-8 mb-28 h-4/6 lg:mb-12 xl:mb-24  md:mb-32">
+      <img src="images/lam-big-01-title.png" alt="01-title" class="w-48 h-32" />
+      <p class="text-sm md:text-base px-4 md:px-20 text-black pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus id interdum velit laoreet. Eu
+        tincidunt tortor aliquam nulla facilisi cras fermentum odio.</p>
+    </div>
+     <!-- Swiper carousel -->
+    <div class="flex justify-center bg-gray-700 relative h-2/6 top-0 md:top-4">
+      <div class="w-64 md:w-5/6 h-40 md:m-10 lg:m-0  overflow-x-auto">
+        <div class="swiper mySwiper">
+
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><img src="images/lam-first-carousel-image.png" alt="first-carousel-image"
+                class="w-full h-full swiper-slide object-cover" /></div>
+            <div class="swiper-slide"><img src="images/lam-second-carousel-image.png" alt="first-carousel-image"
+                class="w-full h-full swiper-slide object-cover" /></div>
+            <div class="swiper-slide"><img src="images/lam-first-carousel-image.png" alt="first-carousel-image"
+                class="w-full h-full swiper-slide object-cover" /></div>
+            <div class="swiper-slide"><img src="images/lam-second-carousel-image.png" alt="second-carousel-image"
+                class="w-full h-full swiper-slide object-cover" /></div>
+            <div class="swiper-slide"><img src="images/lam-first-carousel-image.png" alt="first-carousel-image"
+                class="w-full h-full swiper-slide object-cover" /></div>
+            <div class="swiper-slide"><img src="images/lam-second-carousel-image.png" alt="first-carousel-image"
+                class="w-full h-full swiper-slide object-cover" /></div>
+            <div class="swiper-slide"><img src="images/lam-first-carousel-image.png" alt="first-carousel-image"
+                class="w-full h-full swiper-slide object-cover" /></div>
+            <div class="swiper-slide"><img src="images/lam-second-carousel-image.png" alt="second-carousel-image"
+                class="w-full h-full swiper-slide object-cover" /></div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+
+
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+  <div class="w-full h-32 md:h-48 mx-auto px-4  md:px-32 lg:px-56  py-0 md:py-6 bg-white shadow-md relative top-0 z-20">
+    <div class="flex items-center justify-between">
+      <div class="block w-64">
+        <img src="images/lam-big-02-title.png" alt="logo" class="w-56 " />
+      </div>
+      <div class="flex space-x-4  ">
+        <p" class="text-gray-700 text-sm md:text-base my-6 md:my-12 mx-8 ">Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+      </div>
+    </div>
+  </div>
+   <!-- Accordion for small screens -->
+  <div class="block w-full md:hidden">
+    <button class="bg-gray-200 p-8 w-full text-gray-800 uppercase font-bold underline  text-left accordion">Mountain
+      1</button>
+    <div class="accordion-sub">
+      <!-- <img src="images/lam-tab-1-schedule.png" alt="01-title" class="w-full h-48 " /> -->
+
+      <!-- OR -->
+
+      <div class="w-full px-4 py-8">
+        <h1 class="py-2 text-xl uppercase font-bold px-8">Schedule</h1>
+        <ul class="block">
+          <li class="flex w-full justify-around text-xs py-4">
+            <p> 25 Nov 2016
+            <p>
+            <p> Vestibulum viverra</p>
+          </li>
+          <li class="flex w-full justify-around text-xs py-4">
+            <p> 25 Nov 2016
+            <p>
+            <p> Vestibulum viverra</p>
+          </li>
+          <li class="flex w-full justify-around text-xs py-4">
+            <p> 25 Nov 2016
+            <p>
+            <p> Vestibulum viverra</p>
+          </li>
+          <li class="flex w-full justify-around text-xs py-4">
+            <p> 25 Nov 2016
+            <p>
+            <p> Vestibulum viverra</p>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+
+    <button class="bg-gray-200 p-8 w-full text-gray-800 uppercase font-bold underline text-left accordion">Mountain
+      11</button>
+    <div class="accordion-sub">
+      <!-- <img src="images/lam-tab-1-schedule.png" alt="01-title" class="w-full h-48 " /> -->
+
+      <!-- OR -->
+
+      <div class="w-full px-4 py-8">
+        <h1 class="py-2 text-xl uppercase font-bold px-8">Schedule</h1>
+        <ul class="block">
+          <li class="flex w-full justify-around text-xs py-4">
+            <p> 25 Nov 2016
+            <p>
+            <p> Vestibulum viverra</p>
+          </li>
+          <li class="flex w-full justify-around text-xs py-4">
+            <p> 25 Nov 2016
+            <p>
+            <p> Vestibulum viverra</p>
+          </li>
+          <li class="flex w-full justify-around text-xs py-4">
+            <p> 25 Nov 2016
+            <p>
+            <p> Vestibulum viverra</p>
+          </li>
+          <li class="flex w-full justify-around text-xs py-4">
+            <p> 25 Nov 2016
+            <p>
+            <p> Vestibulum viverra</p>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+   <!-- Tab navigation for medium and large screens -->
+  <!-- Tab buttons -->
+  <div class=" hidden md:contents  w-full h-16 mx-auto px-20 md:px-32 lg:px-56  py-1 relative  z-20">
+    <div class="flex items-start justify-between">
+      <div class="flex space-x-4 px-48">
+        <button
+          class="tabBtn text-gray-700 underline font-bold w-40 py-4 px-4 md:px-auto md:py-auto  text-center bg-gray-400  hover:text-blue-500"
+          onclick="openTab(event, 'mountainOne')" id="defaultTab"> MOUNTAIN 1</button>
+        <button
+          class="tabBtn text-gray-700 underline w-40 py-4 px-4 md:px-auto md:py-auto  text-center  hover:text-blue-500"
+          onclick="openTab(event, 'mountainTwo')"> MOUNTAIN 2 </button>
+      </div>
+    </div>
+  </div>
+   <!-- Schedule section for medium and large screens -->
+  <section class="h-screen  hidden md:flex  bg-cover bg-no-repeat bg-center justify-items-center content-between"
+    style="background-image: url('images/lam-tab-1.png')">
+    <div id="mountainOne" class="px-60 py-20 mb-32 schedule">
+      <!-- <img src="images/lam-tab-1-schedule.png" alt="01-title" class="w-64 h-48 " /> -->
+      <!-- OR -->
+
+      <div class="sch px-4 py-8">
+        <h1 class="py-2 text-xl uppercase font-bold px-4">Schedule</h1>
+        <ul class="block">
+          <li class="flex w-full justify-around text-xs py-2">
+            <p> 25 Nov 2016
+            <p>
+            <p> Vestibulum viverra</p>
+          </li>
+          <li class="flex w-full justify-around text-xs py-2">
+            <p> 25 Nov 2016
+            <p>
+            <p> Vestibulum viverra</p>
+          </li>
+          <li class="flex w-full justify-around text-xs py-2">
+            <p> 25 Nov 2016
+            <p>
+            <p> Vestibulum viverra</p>
+          </li>
+          <li class="flex w-full justify-around text-xs py-2">
+            <p> 25 Nov 2016
+            <p>
+            <p> Vestibulum viverra</p>
+          </li> 
+</ul>
+  </div>
+
+    </div>
+    <div id="mountainTwo" class="px-56 py-20 mb-32 schedule">
+      <!-- <img src="images/lam-tab-1-schedule.png" alt="01-title" class="w-64 h-48 " /> -->
+      <!-- OR -->
+
+      <div class="sch px-4 py-8">
+        <h1 class="py-2 text-xl uppercase font-bold px-4">Schedule</h1>
+        <ul class="block">
+          <li class="flex w-full justify-around text-xs py-2">
+            <p> 25 Nov 2016
+            <p>
+            <p> Vestibulum viverra</p>
+          </li>
+          <li class="flex w-full justify-around text-xs py-2">
+            <p> 25 Nov 2016
+            <p>
+            <p> Vestibulum viverra</p>
+          </li>
+          <li class="flex w-full justify-around text-xs py-2">
+            <p> 25 Nov 2016
+            <p>
+            <p> Vestibulum viverra</p>
+          </li>
+          <li class="flex w-full justify-around text-xs py-2">
+            <p> 25 Nov 2016
+            <p>
+            <p> Vestibulum viverra</p>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer class="w-full h-20 mx-auto px-2 md:px-32 lg:px-56 py-6 text-white py-4 bg-gray-800">
+
+    <div class="flex items-center justify-between">
+      <a href="#" class="flex">
+
+        <img src="images/lam-footer-logo.png" alt="logo" class="w-24 h-8" />
+      </a>
+      <div class="flex space-x-4 text-xs md:text-sm">
+        <p>COPYRIGHTS &copy; 2024 ALL RIGHTS RESERVE</p>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+
+  <script>
+    // ACCORDION FUNCTIONALITY
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    }
+
+   //TAB FUNCTIONALITY
+    function openTab(evt, itemName) {
+   
+      var i, tabcontent, tablinks;
+
+      tabcontent = document.getElementsByClassName("schedule");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+
+      tablinks = document.getElementsByClassName("tabBtn");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(itemName).style.display = "block";
+      evt.currentTarget.className += " active";
+
+
+
+    }
+  </script>
+
+</body>
+
+</html>
